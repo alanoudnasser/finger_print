@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 super.onAuthenticationFailed();
             }
         });
-        promptInfo=new BiometricPrompt.PromptInfo.Builder().setTitle("secure box").setDescription("use finger print to login").setAllowedAuthenticators(1).build();
+        promptInfo=new BiometricPrompt.PromptInfo.Builder().setTitle("secure box").setDescription("use finger print to login").setDeviceCredentialAllowed().build();
 
         biometricPrompt.authenticate((promptInfo));
     }
